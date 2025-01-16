@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajveer Mashruwala</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-nav {
+            text-align: center;
+        }
+
+        .navbar-nav a {
+            color: #333;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar-nav a:hover {
+            background-color: #f1c40f;
+            color: white;
+        }
+
+        .container {
+            padding-top: 80px; /* Adjust container to avoid overlap with fixed navbar */
+        }
+
+        /* Hero Section */
+        .hero-wrap {
+          height: 100vh; /* Full viewport height */
+          background: linear-gradient(to bottom right, whitesmoke, white); /* Gradient background */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          color: black;
+        }
+
+        .hero-wrap h1 {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        .hero-wrap .txt-rotate {
+            font-size: 50px;
+            font-weight: 700;
+            color: grey;
+        }
+
+        .hero-wrap .txt-rotate .wrap {
+            border-right: 0.08em solid grey;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+            background-color: #fff;
+            margin: 20px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .resume-wrap {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .resume-wrap .icon {
+            font-size: 30px;
+            color: #f1c40f;
+            margin-right: 20px;
+        }
+
+        .resume-wrap h2 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .resume-wrap span {
+            font-weight: 600;
+            color: #555;
+        }
+
+        .resume-wrap p {
+            color: #777;
+        }
+
+        /* Skills Section Styling */
+#skills {
+    background-color: #fff;
+    padding: 60px 0;
+}
+
+.skills-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-in-out;
+    animation-fill-mode: both;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill .icon {
+    font-size: 40px;
+    color: grey;
+    margin-right: 20px;
+    animation: bounce 2s infinite;
+}
+
+.skill .text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.skill .text p {
+    margin: 0;
+    color: #777;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="favicon.ico" alt="logo">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-wrap">
+        <div class="container">
+            <h1>Hi, I'm Rajveer Mashruwala</h1>
+            <div class="txt-rotate" data-rotate='["Developer", "Cybersecurity Enthusiast", "Lifelong Learner"]' data-period="2000"></div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-heading">About Me</h2>
+            <div class="resume-wrap">
+                <div class="icon"><span class="flaticon-user"></span></div>
+                <div class="text">
+                    <h2>Rajveer Mashruwala</h2>
+                    <p>My name is Rajveer Mashruwala, and I am currently pursuing an Advanced Diploma in Computer Programming and Analysis at Durham College. I have a strong technical background, combining academic knowledge with practical experience in software development, database management, and programming.
+
+                      I am originally from India, where I developed a passion for technology and problem-solving. This inspired me to further my education and career in the field of computer science, particularly in programming, networking, and cybersecurity.
+                      
+                      I have worked on several projects, including:
+                      
+                      SQL Database Development for Lake Ridge Community Hospital (LRCH),
+                      Track Day Management Suite,
+                      WPF Tic-Tac-Toe Game,
+                      Car Service Shop Reservation System.
+                      Currently, I am also working as a part-time crew member at Odd Burger, where I have honed my teamwork and time-management skills while balancing academic and professional commitments.
+                      
+                      In addition to my academic and professional pursuits, I am a quick learner and enjoy exploring emerging technologies, analyzing poetry, and enhancing my programming skills. These hobbies fuel my creativity and analytical thinking, which I bring to all aspects of my work.
+                      
+                      </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-heading">Experience</h2>
+            <div class="resume-wrap">
+                <div class="icon"><span class="flaticon-business">💼</span></div>
+                <div class="text">
+                    <span class="date">January 2024 – Present</span>
+                    <h2>Crew Member</h2>
+                    <span class="position">Odd Burger</span>
+                    <p>Maintained confidentiality and accuracy while managing customer data and transactions.
+                      Enhanced team efficiency by demonstrating effective communication and multitasking in a high-pressure environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-heading">Education</h2>
+            <div class="resume-wrap">
+                <div class="icon"><span class="flaticon-education">🎓</span></div>
+                <div class="text">
+                    <span class="date">2023 – Present</span>
+                    <h2>Advance Diploma in Computer Programming & Analysis</h2>
+                    <span class="position">Durham College</span>
+                    <p>I am pursuing an advanced diploma in Computer Programming and Analysis at Durham College, a top institution known for its focus on practical, industry-relevant education. The program equips me with essential programming, software development, and system analysis skills, preparing me for a successful career in the tech industry.</p>
+                </div>  
+            </div>
+        </div>
+        <div class="container">
+          <div class="resume-wrap">
+              <div class="icon"><span class="flaticon-education">🎓</span></div>
+              <div class="text">
+                  <span class="date">2022 – 2022</span>
+                  <h2>High School</h2>
+                  <span class="position">ST. Xavier's High School</span>
+                  <p>St. Xavier’s School is a prestigious educational institution known for its rich tradition of academic excellence and holistic development. With a focus on nurturing young minds, the school provides a vibrant learning environment that emphasizes discipline, creativity, and moral values. Equipped with modern facilities and a dedicated faculty, St. Xavier’s encourages students to excel in academics, sports, and extracurricular activities. The school fosters a sense of community and social responsibility, preparing students to become well-rounded individuals and global citizens. Guided by its motto of striving for excellence, St. Xavier’s continues to inspire and empower generations of learners.</p>
+              </div>  
+          </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+          <h2 class="section-heading">Projects</h2>
+  
+          <!-- Project 1 -->
+          <div class="resume-wrap">
+              <div class="icon"><span class="flaticon-project"></span></div>
+              <div class="text">
+                  <h2>SQL Database Project</h2>
+                  <p>Designed and implemented a normalized relational database for a hospital management system. Applied data security practices to manage sensitive patient and physician records. Created advanced SQL queries to analyze and generate reports.
+                    </p>
+              </div>
+          </div>
+  
+          <!-- Project 2 -->
+          <div class="resume-wrap">
+              <div class="icon"><span class="flaticon-project"></span></div>
+              <div class="text">
+                  <h2>C# JSON Data Management Application </h2>
+                  <p>Designed and implemented a C# application to manage and store data using JSON files. Developed features to serialize and deserialize data for efficient storage and retrieval. Enhanced application functionality with user-friendly interfaces for data input, editing, and viewing. Ensured robust error handling and validation to maintain data integrity.
+                    </p>
+              </div>
+          </div>
+  
+          <!-- Project 3 -->
+          <div class="resume-wrap">
+              <div class="icon"><span class="flaticon-project"></span></div>
+              <div class="text">
+                  <h2>Snake-Water-Gun Game</h2>
+                  <p>Developed a simple Python-based game mimicking the popular "Rock-Paper-Scissors" concept using the Snake-Water-Gun analogy.
+                    Incorporated Python's random module to enable the computer to randomly select between Snake, Water, and Gun.
+                    Designed user-friendly input and output with clear instructions for players to select their choice and view results.
+                    Implemented a logic-based decision tree to determine game outcomes, ensuring accurate results for all scenarios:
+                    Snake drinks water, Snake beats Gun, and Gun sinks in Water.
+                    Enhanced code readability by using dictionaries to map user inputs and results to their corresponding terms (e.g., "Snake," "Water," "Gun").
+                    Provided meaningful feedback for each outcome, such as "Snake drinks the water, hence user wins" or "Gun will drown in water, hence user loses."
+                    </p>
+              </div>
+          </div>
+
+          <div class="resume-wrap">
+            <div class="icon"><span class="flaticon-project"></span></div>
+            <div class="text">
+                <h2>Voice Assistant "Jarvis"</h2>
+                <p>Developed a Python-based voice assistant inspired by "Jarvis" from the Iron Man franchise to enable hands-free interaction with essential services.
+                    Utilized the speech recognition library to process voice commands, converting speech into text for natural and intuitive interaction.
+                    Integrated pyttsx3 for text-to-speech functionality, providing real-time voice feedback to user queries.
+                    Added functionality to open frequently accessed websites (Google, Facebook, Instagram, GitHub) using voice commands for enhanced productivity and convenience.
+                    Enabled custom music playback with voice commands like "play [song name]," fetching predefined music links stored in a dictionary.
+                    Leveraged the web browser module to handle seamless navigation and multimedia playback.
+                    Designed a wake-word detection system to activate the assistant upon hearing "Jarvis" and process commands in a responsive loop.
+                    Implemented exception handling to manage unrecognized speech, timeouts, and microphone errors, ensuring robust and reliable performance.
+                    
+                  </p>
+            </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+        <h2 class="section-heading">Skills</h2>
+        <div class="skills-wrap">
+            <div class="skill">
+                <div class="icon"><i class="fas fa-code"></i></div>
+                <div class="text">
+                    <h3>Programming</h3>
+                    <p>Proficient in Python, C# and JavaScript.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-database"></i></div>
+                <div class="text">
+                    <h3>Database Management</h3>
+                    <p>Experienced in designing, querying, and optimizing relational databases like PostgreSQL and SQL Server.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
+                <div class="text">
+                    <h3>Networking</h3>
+                    <p>Strong understanding of networking concepts, including Network security protocols and Security tools.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fa-layer-group"></i></div>
+                <div class="text">
+                    <h3>Software Development</h3>
+                    <p>Experience in WPF, Windows Forms, and web development frameworks like Bootstrap.</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon"><i class="fas fas fa-desktop"></i></div>
+                <div class="text">
+                    <h3>Operating Systems</h3>
+                    <p>Experience in windows and linux to manage firewalls, file permissions, etc .</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; padding: 20px 0;">
+        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; text-align: left; gap: 20px;">
+    
+            <!-- Find Me On Section -->
+            <div style="flex: 1; min-width: 250px;">
+                <h2 style="margin-bottom: 15px;">Find me on</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="https://www.linkedin.com/feed/" style="color: white; text-decoration: none;">
+                        <span>&#10148;</span> LinkedIn</a></li>
+                    <li><a href="https://github.com/" style="color: white; text-decoration: none;">
+                        <span>&#10148;</span> GitHub</a></li>
+                    <li><a href="https://www.instagram.com/" style="color: white; text-decoration: none;">
+                        <span>&#10148;</span> Instagram</a></li>
+                    <li><a href="https://x.com/home" style="color: white; text-decoration: none;">
+                        <span>&#10148;</span> Twitter</a></li>
+                    <li><a href="https://www.facebook.com/" style="color: white; text-decoration: none;">
+                        <span>&#10148;</span> Facebook</a></li>
+                </ul>
+            </div>
+    
+            <!-- Have a Questions Section -->
+            <div style="flex: 1; min-width: 250px;">
+                <h2 style="margin-bottom: 15px;">Have a Questions?</h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li><span style="margin-right: 10px;">&#128205;</span>Oshawa, Ontario, Canada</li>
+                    <li><a href="tel://+19059244978" style="color: white; text-decoration: none;">
+                        <span style="margin-right: 10px;">&#128222;</span> +1 (905) 924 4978</a></li>
+                    <li><a href="mailto:mashruwalarajveer@gmail.com" style="color: white; text-decoration: none;">
+                        <span style="margin-right: 10px;">&#128231;</span> mashruwalarajveer@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Bottom Footer Section -->
+        <div style="text-align: center; margin-top: 20px;">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Rotating Text JavaScript -->
+    <script>
+        var TxtRotate = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+        };
+    </script>

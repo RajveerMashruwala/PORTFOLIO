@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+#navi {
+    position: sticky;
+    top: 20px;
+}
+
+#navi ul {
+    list-style: none;
+    padding: 0;
+}
+
+#navi ul li {
+    margin: 10px 0;
+}
+
+#navi ul li a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#navi ul li a:hover {
+    color: #0056b3;
+}
+
+.page {
+    margin-bottom: 30px;
+}
+
+.heading {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.resume-wrap {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+.resume-wrap .icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #007bff;
+}
+
+.resume-wrap .text {
+    flex-grow: 1;
+}
+
+.resume-wrap .text .date {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.resume-wrap .text h2 {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.resume-wrap .text .position {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #555;
+}
