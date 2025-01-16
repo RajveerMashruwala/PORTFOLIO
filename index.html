@@ -192,6 +192,56 @@
     }
 }
 
+ /* Media Queries for Responsiveness */
+ @media (max-width: 992px) {
+    .skills-wrap {
+        gap: 15px;
+    }
+
+    .skill {
+        width: 48%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .skills-wrap {
+        gap: 10px;
+    }
+
+    .skill .icon {
+        font-size: 36px; /* Smaller icons */
+        margin-right: 15px;
+    }
+
+    .skill .text h3 {
+        font-size: 18px; /* Smaller font for titles */
+    }
+
+    .skill .text p {
+        font-size: 14px; /* Adjust paragraph font size */
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-wrap {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%; /* Full width for stacked layout */
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .skill .icon {
+        margin: 0 0 10px 0; /* Center icon */
+    }
+}
 
         /* Footer */
         footer {
@@ -200,7 +250,7 @@
             padding: 30px 0;
             text-align: center;
         }
-    </style>
+</style>
 </head>
 <body>
 
@@ -249,7 +299,6 @@
             <div class="resume-wrap">
                 <div class="icon"><span class="flaticon-user"></span></div>
                 <div class="text">
-                    <h2>Rajveer Mashruwala</h2>
                     <p>My name is Rajveer Mashruwala, and I am currently pursuing an Advanced Diploma in Computer Programming and Analysis at Durham College. I have a strong technical background, combining academic knowledge with practical experience in software development, database management, and programming.
 
                       I am originally from India, where I developed a passion for technology and problem-solving. This inspired me to further my education and career in the field of computer science, particularly in programming, networking, and cybersecurity.
