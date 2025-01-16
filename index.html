@@ -567,4 +567,19 @@
                 }
             }
         };
+		
+		document.addEventListener("DOMContentLoaded", function () {
+        const navLinks = document.querySelectorAll(".nav-link");
+        const navbarToggler = document.querySelector(".navbar-toggler");
+        const navbarCollapse = document.querySelector(".navbar-collapse");
+
+        // Close the navbar on link click
+        navLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+                if (navbarToggler.classList.contains("collapsed") === false) {
+                    navbarToggler.click(); // Simulate a click to close the menu
+                }
+            });
+        });
+    });
     </script>
