@@ -1,0 +1,246 @@
+ /* General Body Styling */
+ body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-navbar {
+    height: 80px; /* Adjust height as needed */
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    overflow: hidden;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.navbar-nav a {
+    color: #333;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-nav a:hover {
+    background-color: #f1c40f;
+    color: white;
+}
+
+.container {
+    padding-top: 20px 20px; /* Adjust container to avoid overlap with fixed navbar */
+}
+
+/* Hero Section */
+.hero-wrap {
+  height: 100vh; /* Full viewport height */
+  background: linear-gradient(to bottom right, whitesmoke, white); /* Gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.hero-wrap h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.hero-wrap .txt-rotate {
+    font-size: 50px;
+    font-weight: 700;
+    color: grey;
+}
+
+.hero-wrap .txt-rotate .wrap {
+    border-right: 0.08em solid grey;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.resume-wrap {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.resume-wrap .icon {
+    font-size: 30px;
+    color: #f1c40f;
+    margin-right: 20px;
+}
+
+.resume-wrap h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.resume-wrap span {
+    font-weight: 600;
+    color: #555;
+}
+
+.resume-wrap p {
+    color: #777;
+}
+
+.resume-wrap ul {
+    color: #777;
+}
+
+/* Skills Section Styling */
+#skills {
+background-color: #fff;
+padding: 60px 0;
+}
+
+.skills-wrap {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 30px;
+}
+
+.skill {
+display: flex;
+align-items: center;
+background: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+width: 45%;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+animation: fadeInUp 0.8s ease-in-out;
+animation-fill-mode: both;
+}
+
+.skill:hover {
+transform: translateY(-10px);
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill .icon {
+font-size: 40px;
+color: grey;
+margin-right: 20px;
+animation: bounce 2s infinite;
+}
+
+.skill .text h3 {
+font-size: 20px;
+font-weight: 600;
+margin: 0 0 10px 0;
+}
+
+.skill .text p {
+margin: 0;
+color: #777;
+}
+
+/* Keyframes for Animation */
+@keyframes fadeInUp {
+0% {
+opacity: 0;
+transform: translateY(20px);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+@keyframes bounce {
+0%, 20%, 50%, 80%, 100% {
+transform: translateY(0);
+}
+40% {
+transform: translateY(-10px);
+}
+60% {
+transform: translateY(-5px);
+}
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+.skills-wrap {
+gap: 15px;
+}
+
+.skill {
+width: 48%; /* Adjust width for medium screens */
+}
+}
+
+@media (max-width: 768px) {
+.skill {
+width: 100%; /* Full width for smaller screens */
+}
+
+.skills-wrap {
+gap: 10px;
+}
+
+.skill .icon {
+font-size: 36px; /* Smaller icons */
+margin-right: 15px;
+}
+
+.skill .text h3 {
+font-size: 18px; /* Smaller font for titles */
+}
+
+.skill .text p {
+font-size: 14px; /* Adjust paragraph font size */
+}
+}
+
+@media (max-width: 576px) {
+.skills-wrap {
+flex-direction: column; /* Stack items vertically */
+align-items: center;
+}
+
+.skill {
+width: 100%; /* Full width for stacked layout */
+text-align: center;
+flex-direction: column;
+}
+
+.skill .icon {
+margin: 0 0 10px 0; /* Center icon */
+}
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
