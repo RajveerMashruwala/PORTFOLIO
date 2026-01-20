@@ -1,585 +1,532 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rajveer Mashruwala</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="favicon_io/site.webmanifest">
+  <title>Rajveer Mashruwala | Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        /* General Body Styling */
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
-        /* Navbar Styling */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        .navbar-nav {
-            text-align: center;
-        }
+  <style>
+/* =========================
+   GLOBAL BASE
+========================= */
 
-        .navbar-nav a {
-            color: #333;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-
-        .navbar-nav a:hover {
-            background-color: #f1c40f;
-            color: white;
-        }
-
-        .container {
-            padding-top: 80px; /* Adjust container to avoid overlap with fixed navbar */
-        }
-
-        /* Hero Section */
-        .hero-wrap {
-          height: 100vh; /* Full viewport height */
-          background: linear-gradient(to bottom right, whitesmoke, white); /* Gradient background */
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-align: center;
-          color: black;
-        }
-
-        .hero-wrap h1 {
-            font-size: 50px;
-            font-weight: 700;
-        }
-
-        .hero-wrap .txt-rotate {
-            font-size: 50px;
-            font-weight: 700;
-            color: grey;
-        }
-
-        .hero-wrap .txt-rotate .wrap {
-            border-right: 0.08em solid grey;
-        }
-
-        /* Section Styling */
-        section {
-            padding: 60px 0;
-            background-color: #fff;
-            margin: 20px 0;
-        }
-
-        .section-heading {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .resume-wrap {
-            display: flex;
-            margin-bottom: 30px;
-            align-items: center;
-        }
-
-        .resume-wrap .icon {
-            font-size: 30px;
-            color: #f1c40f;
-            margin-right: 20px;
-        }
-
-        .resume-wrap h2 {
-            font-size: 24px;
-            margin-bottom: 5px;
-        }
-
-        .resume-wrap span {
-            font-weight: 600;
-            color: #555;
-        }
-
-        .resume-wrap p {
-            color: #777;
-        }
-
-        /* Skills Section Styling */
-#skills {
-    background-color: #fff;
-    padding: 60px 0;
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #0f1117;
+  color: #e5e7eb;
 }
 
-.skills-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+/* Typography */
+p, li, span, small {
+  color: #d1d5db;
 }
 
-.skill {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 45%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 0.8s ease-in-out;
-    animation-fill-mode: both;
+h1, h2, h3, h4, h5, h6 {
+  color: #f9fafb;
 }
 
-.skill:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+/* Links */
+a {
+  color: #93c5fd;
+}
+a:hover {
+  color: #bfdbfe;
+  text-decoration: none;
 }
 
-.skill .icon {
-    font-size: 40px;
-    color: grey;
-    margin-right: 20px;
-    animation: bounce 2s infinite;
+/* =========================
+   NAVBAR (DARK)
+========================= */
+
+.navbar {
+  background: rgba(15, 17, 23, 0.95);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
-.skill .text h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
+.navbar-nav .nav-link {
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s;
+  color: #f3f4f6 !important;
 }
 
-.skill .text p {
-    margin: 0;
-    color: #777;
+.navbar-brand {
+  color: #f3f4f6 !important;
 }
 
-/* Keyframes for Animation */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.navbar-nav .nav-link:hover {
+  color: #a78bfa !important;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-10px);
-    }
-    60% {
-        transform: translateY(-5px);
-    }
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-wrap {
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
- /* Media Queries for Responsiveness */
- @media (max-width: 992px) {
-    .skills-wrap {
-        gap: 15px;
-    }
-
-    .skill {
-        width: 48%; /* Adjust width for medium screens */
-    }
+.hero-wrap h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .skill {
-        width: 100%; /* Full width for smaller screens */
-    }
-
-    .skills-wrap {
-        gap: 10px;
-    }
-
-    .skill .icon {
-        font-size: 36px; /* Smaller icons */
-        margin-right: 15px;
-    }
-
-    .skill .text h3 {
-        font-size: 18px; /* Smaller font for titles */
-    }
-
-    .skill .text p {
-        font-size: 14px; /* Adjust paragraph font size */
-    }
+.typed-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #fde68a;
 }
 
-@media (max-width: 576px) {
-    .skills-wrap {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;
-    }
-
-    .skill {
-        width: 100%; /* Full width for stacked layout */
-        text-align: center;
-        flex-direction: column;
-    }
-
-    .skill .icon {
-        margin: 0 0 10px 0; /* Center icon */
-    }
+.hero-buttons .btn {
+  margin: 5px;
 }
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 0;
-            text-align: center;
-        }
+/* Background Video */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark overlay */
+.hero-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 17, 23, 0.75),
+    rgba(22, 26, 34, 0.85)
+  );
+  z-index: 2;
+}
+
+/* Hero content above video */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  background-color: #0f1117;
+}
+
+/* Light background override */
+.bg-light {
+  background-color: #161a22 !important;
+}
+
+/* Section Headings */
+.section-heading {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #f9fafb;
+  position: relative;
+}
+
+.section-heading::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #8b5cf6;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* =========================
+   CARDS (Resume, Projects)
+========================= */
+
+.resume-wrap,
+.project-card {
+  background: #161a22;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 20px;
+  color: #e5e7eb;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.resume-wrap:hover,
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.resume-wrap h4,
+.resume-wrap h5,
+.project-card h5 {
+  color: #f9fafb;
+}
+
+/* =========================
+   SKILLS / PROGRESS BARS
+========================= */
+
+.progress {
+  height: 20px;
+  border-radius: 12px;
+  background: #1f2937;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-light {
+  background: #f9fafb;
+  color: #020617;
+  border: none;
+}
+
+.btn-outline-light {
+  color: #f9fafb;
+  border-color: #f9fafb;
+}
+
+.btn-outline-light:hover {
+  background: #f9fafb;
+  color: #020617;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #020617;
+  color: #e5e7eb;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #e5e7eb;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #facc15;
+}
 </style>
+
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="favicon.ico" alt="logo">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About Me</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#experience">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#education">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero-wrap">
-        <div class="container">
-            <h1>Hi, I'm Rajveer Mashruwala</h1>
-            <div class="txt-rotate" data-rotate='["Developer", "Cybersecurity Enthusiast", "Lifelong Learner"]' data-period="2000"></div>
-        </div>
-    </section>
-
-    <!-- About Me Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-heading">About Me</h2>
-            <div class="resume-wrap">
-                <div class="icon"><span class="flaticon-user"></span></div>
-                <div class="text">
-                    <p>My name is Rajveer Mashruwala, and I am currently pursuing an Advanced Diploma in Computer Programming and Analysis at Durham College. I have a strong technical background, combining academic knowledge with practical experience in software development, database management, and programming.
-
-                      I am originally from India, where I developed a passion for technology and problem-solving. This inspired me to further my education and career in the field of computer science, particularly in programming, networking, and cybersecurity.
-                      
-                      I have worked on several projects, including:
-                      
-                      SQL Database Development for Lake Ridge Community Hospital (LRCH),
-                      Track Day Management Suite,
-                      WPF Tic-Tac-Toe Game,
-                      Car Service Shop Reservation System.
-                      Currently, I am also working as a part-time crew member at Odd Burger, where I have honed my teamwork and time-management skills while balancing academic and professional commitments.
-                      
-                      In addition to my academic and professional pursuits, I am a quick learner and enjoy exploring emerging technologies, analyzing poetry, and enhancing my programming skills. These hobbies fuel my creativity and analytical thinking, which I bring to all aspects of my work.
-                      
-                      </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2 class="section-heading">Experience</h2>
-            <div class="resume-wrap">
-                <div class="icon"><span class="flaticon-business">💼</span></div>
-                <div class="text">
-                    <span class="date">January 2024 – Present</span>
-                    <h2>Crew Member</h2>
-                    <span class="position">Odd Burger</span>
-                    <p>Maintained confidentiality and accuracy while managing customer data and transactions.
-                      Enhanced team efficiency by demonstrating effective communication and multitasking in a high-pressure environment.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <h2 class="section-heading">Education</h2>
-            <div class="resume-wrap">
-                <div class="icon"><span class="flaticon-education">🎓</span></div>
-                <div class="text">
-                    <span class="date">2023 – Present</span>
-                    <h2>Advance Diploma in Computer Programming & Analysis</h2>
-                    <span class="position">Durham College</span>
-                    <p>I am pursuing an advanced diploma in Computer Programming and Analysis at Durham College, a top institution known for its focus on practical, industry-relevant education. The program equips me with essential programming, software development, and system analysis skills, preparing me for a successful career in the tech industry.</p>
-                </div>  
-            </div>
-        </div>
-        <div class="container">
-          <div class="resume-wrap">
-              <div class="icon"><span class="flaticon-education">🎓</span></div>
-              <div class="text">
-                  <span class="date">2022 – 2022</span>
-                  <h2>High School</h2>
-                  <span class="position">ST. Xavier's High School</span>
-                  <p>St. Xavier’s School is a prestigious educational institution known for its rich tradition of academic excellence and holistic development. With a focus on nurturing young minds, the school provides a vibrant learning environment that emphasizes discipline, creativity, and moral values. Equipped with modern facilities and a dedicated faculty, St. Xavier’s encourages students to excel in academics, sports, and extracurricular activities. The school fosters a sense of community and social responsibility, preparing students to become well-rounded individuals and global citizens. Guided by its motto of striving for excellence, St. Xavier’s continues to inspire and empower generations of learners.</p>
-              </div>  
-          </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="#">Rajveer Mashruwala</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#Awards">Awards</a></li>
+        </ul>
       </div>
-    </section>
-    <section id="projects">
-      <div class="container">
-          <h2 class="section-heading">Projects</h2>
-  
-          <!-- Project 1 -->
-          <div class="resume-wrap">
-              <div class="icon"><span class="flaticon-project"></span></div>
-              <div class="text">
-                  <h2>SQL Database Project</h2>
-                  <p>Designed and implemented a normalized relational database for a hospital management system. Applied data security practices to manage sensitive patient and physician records. Created advanced SQL queries to analyze and generate reports.
-                    </p>
-              </div>
-          </div>
-  
-          <!-- Project 2 -->
-          <div class="resume-wrap">
-              <div class="icon"><span class="flaticon-project"></span></div>
-              <div class="text">
-                  <h2>C# JSON Data Management Application </h2>
-                  <p>Designed and implemented a C# application to manage and store data using JSON files. Developed features to serialize and deserialize data for efficient storage and retrieval. Enhanced application functionality with user-friendly interfaces for data input, editing, and viewing. Ensured robust error handling and validation to maintain data integrity.
-                    </p>
-              </div>
-          </div>
-  
-          <!-- Project 3 -->
-          <div class="resume-wrap">
-              <div class="icon"><span class="flaticon-project"></span></div>
-              <div class="text">
-                  <h2>Snake-Water-Gun Game</h2>
-                  <p>Developed a simple Python-based game mimicking the popular "Rock-Paper-Scissors" concept using the Snake-Water-Gun analogy.
-                    Incorporated Python's random module to enable the computer to randomly select between Snake, Water, and Gun.
-                    Designed user-friendly input and output with clear instructions for players to select their choice and view results.
-                    Implemented a logic-based decision tree to determine game outcomes, ensuring accurate results for all scenarios:
-                    Snake drinks water, Snake beats Gun, and Gun sinks in Water.
-                    Enhanced code readability by using dictionaries to map user inputs and results to their corresponding terms (e.g., "Snake," "Water," "Gun").
-                    Provided meaningful feedback for each outcome, such as "Snake drinks the water, hence user wins" or "Gun will drown in water, hence user loses."
-                    </p>
-              </div>
-          </div>
+    </div>
+  </nav>
 
-          <div class="resume-wrap">
-            <div class="icon"><span class="flaticon-project"></span></div>
-            <div class="text">
-                <h2>Voice Assistant "Jarvis"</h2>
-                <p>Developed a Python-based voice assistant inspired by "Jarvis" from the Iron Man franchise to enable hands-free interaction with essential services.
-                    Utilized the speech recognition library to process voice commands, converting speech into text for natural and intuitive interaction.
-                    Integrated pyttsx3 for text-to-speech functionality, providing real-time voice feedback to user queries.
-                    Added functionality to open frequently accessed websites (Google, Facebook, Instagram, GitHub) using voice commands for enhanced productivity and convenience.
-                    Enabled custom music playback with voice commands like "play [song name]," fetching predefined music links stored in a dictionary.
-                    Leveraged the web browser module to handle seamless navigation and multimedia playback.
-                    Designed a wake-word detection system to activate the assistant upon hearing "Jarvis" and process commands in a responsive loop.
-                    Implemented exception handling to manage unrecognized speech, timeouts, and microphone errors, ensuring robust and reliable performance.
-                    
-                  </p>
-            </div>
+  <!-- Hero Section -->
+  <section class="hero-wrap">
+  
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="/14471387_1920_1080_30fps.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1>Hi, I'm Rajveer Mashruwala</h1>
+    <h2><span class="typed-text"></span></h2>
+    <div class="mt-4 hero-buttons d-flex flex-wrap justify-content-center gap-2">
+      <a href="#projects" class="btn btn-light btn-lg shadow-sm">View Projects</a>
+      <a href="/Rajveer_Mashruwala_job_resume.pdf" class="btn btn-outline-light btn-lg">Download Resume</a>
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- About -->
+  <section id="about" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">About Me</h2>
+      <div class="row align-items-center mt-4">
+      
+      <!-- Left: Photo -->
+      <div class="col-md-4 text-center mb-4 mb-md-0">
+        <img 
+          src="/RM.jpeg" 
+          alt="Rajveer Mashruwala"
+          class="img-fluid rounded-circle shadow"
+          style="
+                  width: 250px;
+                  height: 250px;
+                  object-fit: cover;
+                " 
+        >
+      </div>
+      <div class="col-md-8">
+        <p>I am <b>Rajveer Mashruwala</b>, a dedicated software developer and cybersecurity enthusiast with a strong academic foundation in <b>Computer Programming</b> from <b>Durham College</b>. My journey in technology has been shaped by a passion for problem-solving, secure computing, and building efficient systems that deliver real-world impact.</p>
+      <p>Through academic projects and independent exploration, I have gained hands-on experience in <b>software development, database management, and networking</b>. My portfolio includes designing SQL databases for healthcare applications, developing Python-based automation tools, and creating C# applications with user-friendly interfaces. These projects refined my technical expertise and instilled in me the discipline of writing structured, reliable, and secure code.</p>
+      <p>As a lifelong learner, I continuously explore <b>emerging technologies</b> such as artificial intelligence, ethical hacking, and cloud computing, with the goal of contributing to innovative organizations where technology drives meaningful progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">Experience</h2>
+      <div class="resume-wrap">
+        <h4>Crew Member <span class="text-muted">| Odd Burger</span></h4>
+        <small class="text-muted">Jan 2024 – May 2025 • 1 yr 5 mos </small>
+        <p>During my tenure as a Part-Time Crew Member at Odd Burger, Canada, I cultivated a strong professional work ethic and refined my ability to perform effectively in a high-pressure, fast-paced environment. The role demanded exceptional time management, attention to detail, and consistent adherence to operational standards, ensuring a seamless customer experience during peak hours.I enhanced my communication and interpersonal skills through regular interaction with diverse customers, addressing inquiries, and resolving concerns with composure and professionalism. Additionally, I demonstrated reliability and accountability by maintaining strict compliance with food safety and internal protocols.Balancing part-time work alongside academic commitments also strengthened my discipline, adaptability, and multitasking capabilities, equipping me with valuable experience in teamwork, problem-solving, and delivering results under demanding circumstances.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">Education</h2>
+      <div class="resume-wrap">
+        <h4>Diploma in Computer Programming <span class="text-muted">| Durham College</span></h4>
+        <small class="text-muted">Sept 2023 – Oct 2025</small><br>
+        <large class="text-muted"><b>OverAll GPA - 4.23</b></large>
+        <p>At Durham College, I gained comprehensive exposure to programming methodologies, network systems, and database design. Through coursework and practical projects, I developed proficiency in Python, C#, SQL, and cybersecurity principles.</p>
+      </div>
+      <div class="resume-wrap">
+        <h4>High School <span class="text-muted">| ST. Xavier's High School</span></h4>
+        <small class="text-muted">2020 – 2022</small>
+        <p>St. Xavier’s School provided the academic foundation for my analytical and logical reasoning skills. With a curriculum emphasizing mathematics and science, I cultivated critical thinking, discipline, and intellectual curiosity, laying the groundwork for my pursuit of computer science and technology.</p>
+      </div>
+    </div>
+  </section>
+<!-- Projects -->
+  <section id="projects" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">Projects</h2>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div class="project-card">
+            <h5>SQL Database Project</h5>
+            <p>Hospital management system with secure patient/physician records and advanced queries for reporting.</p>
+          </div>
         </div>
+        <div class="col-md-6 mb-4">
+          <div class="project-card">
+            <h5>C# JSON Data Management App</h5>
+            <p>Designed a C# app with JSON serialization, robust error handling, and user-friendly data interfaces.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="project-card">
+            <h5>Snake-Water-Gun Game</h5>
+            <p>Python-based game logic with randomization and decision mapping for interactive play.</p>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div class="project-card">
+            <h5>Voice Assistant "Jarvis"</h5>
+            <p>Python voice assistant with speech recognition, TTS, custom commands, and wake-word detection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-5">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">Skills</h2>
+      <div class="mb-3">
+        <h5>Python</h5>
+        <div class="progress"><div class="progress-bar bg-info" style="width: 85%;">85%</div></div>
+      </div>
+      <div class="mb-3">
+        <h5>C/C#</h5>
+        <div class="progress"><div class="progress-bar bg-success" style="width: 75%;">75%</div></div>
+      </div>
+      <div class="mb-3">
+        <h5>SQL</h5>
+        <div class="progress"><div class="progress-bar bg-warning" style="width: 80%;">80%</div></div>
+      </div>
+      <div class="skill mt-3">
+          <h5>Web Development (HTML, CSS, JavaScript)</h5>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 75%;">75%</div>
+          </div>
+        </div>
+        <div class="mb-3">
+          <h5>Networking & Security</h5>
+          <div class="progress"><div class="progress-bar bg-danger" style="width: 70%;">70%</div></div>
+        </div>
+        <div class="skill mt-3">
+          <h5>Linux</h5>
+          <div class="progress">
+            <div class="progress-bar bg-dark" style="width: 90%;">90%</div>
+          </div>
+        </div>
+        <div class="skill mt-3">
+          <h5>Windows OS</h5>
+          <div class="progress">
+            <div class="progress-bar bg-secondary" style="width: 90%;">90%</div>
+          </div>
+        </div>
+        <div class="skill">
+          <h6>Git / GitHub</h6>
+          <div class="progress">
+            <div class="progress-bar bg-success" style="width: 80%;">80%</div>
+          </div>
+        </div>
+        <div class="skill mt-3">
+          <h6>Visual Studio</h6>
+          <div class="progress">
+            <div class="progress-bar bg-info" style="width: 85%;">85%</div>
+          </div>
+        </div>
+      </div>
+      </div>
       </div>
   </section>
 
-  <section id="skills">
-    <div class="container">
-        <h2 class="section-heading">Skills</h2>
-        <div class="skills-wrap">
-            <div class="skill">
-                <div class="icon"><i class="fas fa-code"></i></div>
-                <div class="text">
-                    <h3>Programming</h3>
-                    <p>Proficient in Python, C# and JavaScript.</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="icon"><i class="fas fa-database"></i></div>
-                <div class="text">
-                    <h3>Database Management</h3>
-                    <p>Experienced in designing, querying, and optimizing relational databases like PostgreSQL and SQL Server.</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="icon"><i class="fas fa-network-wired"></i></div>
-                <div class="text">
-                    <h3>Networking</h3>
-                    <p>Strong understanding of networking concepts, including Network security protocols and Security tools.</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="icon"><i class="fas fa-layer-group"></i></div>
-                <div class="text">
-                    <h3>Software Development</h3>
-                    <p>Experience in WPF, Windows Forms, and web development frameworks like Bootstrap.</p>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="icon"><i class="fas fas fa-desktop"></i></div>
-                <div class="text">
-                    <h3>Operating Systems</h3>
-                    <p>Experience in windows and linux to manage firewalls, file permissions, etc .</p>
-                </div>
-            </div>
+  <!-- Certifications -->
+<section id="certifications" class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <h2 class="section-heading">Certifications</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="resume-wrap">
+          <h5>Mastering Linux: The Comprehensive Guide</h5>
+          <small class="text-muted">Udemy | 2025</small>
+          <p>Accomplished an in-depth, rigorous program encompassing advanced Linux administration, system architecture, shell scripting, network configuration, and security best practices. Demonstrated proficiency in deploying, managing, and securing Linux-based environments for both development and production contexts.</p>
         </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="resume-wrap">
+          <h5>Python Essential Training</h5>
+          <small class="text-muted">linkedIn | 2025</small>
+          <p>Successfully completed a comprehensive program in Python programming, emphasizing core language constructs, data structures, object-oriented design, and best practices. Developed practical skills in writing efficient, modular, and maintainable code applicable to real-world software development and data-driven projects.</p>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-    <!-- Footer Section -->
-    <!-- Footer -->
-    <footer style="background-color: #333; color: white; padding: 20px 0;">
-        <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; text-align: left; gap: 20px;">
-    
-            <!-- Find Me On Section -->
-            <div style="flex: 1; min-width: 250px;">
-                <h2 style="margin-bottom: 15px;">Find me on</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li><a href="https://www.linkedin.com/feed/" style="color: white; text-decoration: none;">
-                        <span>&#10148;</span> LinkedIn</a></li>
-                    <li><a href="https://github.com/" style="color: white; text-decoration: none;">
-                        <span>&#10148;</span> GitHub</a></li>
-                    <li><a href="https://www.instagram.com/" style="color: white; text-decoration: none;">
-                        <span>&#10148;</span> Instagram</a></li>
-                    <li><a href="https://x.com/home" style="color: white; text-decoration: none;">
-                        <span>&#10148;</span> Twitter</a></li>
-                    <li><a href="https://www.facebook.com/" style="color: white; text-decoration: none;">
-                        <span>&#10148;</span> Facebook</a></li>
-                </ul>
-            </div>
-    
-            <!-- Have a Questions Section -->
-            <div style="flex: 1; min-width: 250px;">
-                <h2 style="margin-bottom: 15px;">Have a Questions?</h2>
-                <ul style="list-style: none; padding: 0;">
-                    <li><span style="margin-right: 10px;">&#128205;</span>Oshawa, Ontario, Canada</li>
-                    <li><a href="tel://+19059244978" style="color: white; text-decoration: none;">
-                        <span style="margin-right: 10px;">&#128222;</span> +1 (905) 924 4978</a></li>
-                    <li><a href="mailto:mashruwalarajveer@gmail.com" style="color: white; text-decoration: none;">
-                        <span style="margin-right: 10px;">&#128231;</span> mashruwalarajveer@gmail.com</a></li>
-                </ul>
-            </div>
-        </div>
-    
-        <!-- Bottom Footer Section -->
-        <div style="text-align: center; margin-top: 20px;">
-            <p>&copy; <script>document.write(new Date().getFullYear());</script> All rights reserved.</p>
-        </div>
-    </footer>
-    
+<!-- Awards -->
+  <section id="Awards" class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section-heading">Awards</h2>
+      <div class="resume-wrap">
+        <h4>Durham College Honour Award <span class="text-muted">| Durham College</span></h4>
+        <small class="text-muted">July 9, 2025</small>
+        <p>I am proud to have been recognized on the Durham College Honour Roll, an academic distinction awarded to students who consistently demonstrate outstanding scholastic achievement. This honor reflects my dedication to maintaining high academic standards, disciplined study habits, and a strong commitment to learning. Achieving this milestone required perseverance, focus, and the ability to balance rigorous coursework with other responsibilities. Beyond being a recognition of academic excellence, the Honour Roll award motivates me to continue striving for growth, resilience, and integrity in both my educational and professional pursuits.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="mb-3">
+      <a href="https://www.linkedin.com/in/mashruwalarajveer"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/RajveerMashruwala/PROJECT"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/rajveer_mashruwala"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/RajveerMas82789"><i class="fab fa-twitter"></i></a>
+    </div>
+    <p>📧 Email: <a href="mailto:mashruwalarajveer@gmail.com" class="text-light">mashruwalarajveer@gmail.com</a><br>
+       📱 Phone: +91 9429147587 <br></p>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Rajveer Mashruwala. All rights reserved.</p>
+  </footer>
 
-    <!-- Rotating Text JavaScript -->
-    <script>
-        var TxtRotate = function (el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
 
-        TxtRotate.prototype.tick = function () {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+    // Typing effect
+    const words = ["Developer", "Cybersecurity Enthusiast", "Lifelong Learner"];
+    let i = 0, j = 0, currentWord = "", isDeleting = false;
+    function type() {
+      currentWord = words[i];
+      document.querySelector(".typed-text").textContent =
+        currentWord.substring(0, j) + (isDeleting ? "" : "|");
+      if (!isDeleting && j < currentWord.length) {
+        j++;
+      } else if (isDeleting && j > 0) {
+        j--;
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % words.length;
+      }
+      setTimeout(type, isDeleting ? 100 : 150);
+    }
+    type();
 
-            if (this.isDeleting) {
-                this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-                this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
-
-            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-            var that = this;
-            var delta = 200 - Math.random() * 100;
-
-            if (this.isDeleting) {
-                delta /= 2;
-            }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-                delta = this.period;
-                this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-                this.isDeleting = false;
-                this.loopNum++;
-                delta = 500;
-            }
-
-            setTimeout(function () {
-                that.tick();
-            }, delta);
-        };
-
-        window.onload = function () {
-            var elements = document.getElementsByClassName('txt-rotate');
-            for (var i = 0; i < elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-rotate');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-        };
-		
-		document.addEventListener("DOMContentLoaded", function () {
-        const navLinks = document.querySelectorAll(".nav-link");
-        const navbarToggler = document.querySelector(".navbar-toggler");
-        const navbarCollapse = document.querySelector(".navbar-collapse");
-
-        // Close the navbar on link click
-        navLinks.forEach((link) => {
-            link.addEventListener("click", function () {
-                if (navbarToggler.classList.contains("collapsed") === false) {
-                    navbarToggler.click(); // Simulate a click to close the menu
-                }
-            });
-        });
+    // Auto collapse navbar when link clicked (Mobile fix)
+    document.querySelectorAll('.navbar-nav .nav-link').forEach(function(navLink) {
+      navLink.addEventListener('click', function() {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
     });
-    </script>
+  </script>
+</body>
+</html>
